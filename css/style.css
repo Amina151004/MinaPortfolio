@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 
 /* CSS Variables for Theme Colors and Fonts */
 :root {
@@ -6,33 +7,68 @@
   --secondary-color: #cc2eb7;
   --background-color: #2b2b2b;
   --text-color: #ffffff;
-  --font-family: "Arial", sans-serif;
+  --font-family: "Roboto Mono", monospace;
 }
 
-.jersey-15-regular {
-  font-family: "Jersey 15", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+
+
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 300;
+}
 
 html, body {
   overflow-x: hidden;
+  overflow-y: auto;
   min-height: 100vh;
-}
-
-body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--font-family);
+  width: 100%;
 }
 
-/* Header Styles */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0; /* Behind your main content but visible */
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) translateX(10vw);
+    opacity: 0;
+  }
+}
+
+
+
+/* Header */
 header {
   position: absolute;
   top: 0;
@@ -52,7 +88,6 @@ header nav ul {
 }
 
 header nav ul li {
-  display: inline-block;
   margin-right: 5rem;
 }
 
@@ -67,9 +102,9 @@ header nav ul li a {
 
 header nav ul li a:hover {
   color: var(--primary-color);
-  text-shadow: 0 0 5px var(--primary-color), 
+  text-shadow: 0 0 5px var(--primary-color),
                0 0 10px var(--primary-color),
-               0 0 20px var(--primary-color), 
+               0 0 20px var(--primary-color),
                0 0 40px var(--primary-color);
 }
 
@@ -81,7 +116,7 @@ header nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+  overflow: visible;
 }
 
 .corner-image {
@@ -90,7 +125,7 @@ header nav ul li a:hover {
   left: 0;
   width: 30rem;
   height: 30rem;
-  z-index: -1;
+  z-index: 0;
 }
 
 .hero-text {
@@ -99,7 +134,7 @@ header nav ul li a:hover {
   font-family: "Jersey 15", sans-serif;
   font-size: 5rem;
   text-align: left;
-  left: 16.5rem;
+  left: 13rem;
   top: 12rem;
 }
 
@@ -108,7 +143,7 @@ header nav ul li a:hover {
   padding: 0;
 }
 
-/* Button Styles */
+/* Button */
 button {
   align-items: center;
   background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
@@ -120,12 +155,11 @@ button {
   font-size: 18px;
   justify-content: center;
   line-height: 1em;
-  max-width: 100%;
   min-width: 140px;
   padding: 3px;
   cursor: pointer;
   transition: all 0.3s;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 button a {
@@ -134,9 +168,9 @@ button a {
   border-radius: 20px;
   width: 100%;
   height: 100%;
-  transition: 300ms;
   text-decoration: none;
   color: inherit;
+  transition: 300ms;
 }
 
 button:hover a {
@@ -146,32 +180,111 @@ button:hover a {
 button:active {
   transform: scale(0.9);
 }
-/* Add this to your existing CSS */
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  align-items: flex-start;
-}
 
-.social-links a {
-  color: var(--text-color);
-  font-size: 1.8rem;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  color: var(--primary-color);
-  transform: translateY(-3px);
-  text-shadow: 0 0 10px var(--primary-color);
-}
-
-
-/* Robot/Spline Viewer */
+/* Robot / Spline Viewer */
 .robot {
   position: absolute;
   width: 65rem;
   height: 50rem;
   right: -12%;
+  overflow: visible;
+}
+
+/* Socials */
+.socials-container {
+  position: absolute;
+  left: 7rem;
+  top: 30rem;
+}
+
+.socials-container a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem 0;
+}
+
+.socials-container a svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.socials-container a:hover svg path {
+  fill: var(--accent-color);
+}
+
+.circle-scroll {
+  position: absolute;
+  bottom: 2rem;
+  width: 20rem;
+  height: 20rem;
+  top: 40rem;
+  right: -10%;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+/* About Me */
+.aboutme {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20rem;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem;
+  text-align: center;
+  background: linear-gradient(-45deg, #3498db, #cc2eb7, #00ddeb, #af40ff);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.aboutme p {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  max-width: 800px;
+  line-height: 1.5;
+  font-family: var(--font-family);
+}
+* h1 {
+  font-size: 4rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.aboutme .small-text{
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.hero .small-text{
+  font-size: 1rem;
+  font-style: normal;
+  margin-top: 1rem;
+  font-family: var(--font-family);
+}
+
+.Skills {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20rem;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem;
+  
 }
