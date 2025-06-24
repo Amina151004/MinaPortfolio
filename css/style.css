@@ -501,3 +501,146 @@ button:active {
 .contact-me button:hover {
   opacity: 0.9;
 }
+
+.Degrees-Certifications {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem;
+  color: var(--text-color);
+}
+
+.education{
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: start;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.logo-uni {
+  width: 300px;
+  height: 300px;
+  margin-right: 2rem;
+}
+
+.edutext{
+  margin: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  width: 50%;
+}
+
+.edutext span {
+  font-weight: bold;
+  background: linear-gradient(90deg, #af40ff, #5b42f3, #00ddeb);
+  font-size: 1.3rem;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects {
+  margin-top: 3rem;
+  width: 100%;
+  padding: 4rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+
+
+.projects h1 {
+  margin-bottom: 4rem;
+}
+.projects-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 60px; /* Space for arrows */
+}
+
+.projects-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  width: 31.25rem;
+  margin: 0 15px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  background: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #5b42f3;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.6;
+  flex-shrink: 0;
+  margin: 2rem;
+}
+
+.project-card.active {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+
+.project-image {
+  max-width: 27rem;
+  margin: 2rem;
+}
+
+.project-app{
+  margin-top: 1rem;
+  max-width: 20rem;
+
+}
+
+.projects-slider :nth-child(2) {
+  padding-bottom: 0;
+}

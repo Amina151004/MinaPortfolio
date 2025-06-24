@@ -128,3 +128,51 @@ function createTrailDot(x, y) {
     trail.remove();
   }, 500);
 }
+window.addEventListener('scroll', () => {
+  const elements = document.querySelectorAll('.hidden');
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+      el.classList.remove('hidden');
+    }
+  });
+});
+
+
+const slider1 = document.querySelector('.projects-slider');
+const cards = document.querySelectorAll('.project-card');
+const leftBtn = document.querySelector('.left-arrow');
+const rightBtn = document.querySelector('.right-arrow');
+
+let currentIndex = 0;
+const cardWidth = cards[0].offsetWidth + 30; // Width + margin
+
+function updateSlider() {
+  // Remove active class from all cards
+  cards.forEach(card => card.classList.remove('active'));
+  
+  // Add active class to current card
+  cards[currentIndex].classList.add('active');
+  
+  // Calculate offset (centering the active card)
+  const offset = (slider1.offsetWidth / 2) - (cardWidth / 2) - (currentIndex * cardWidth);
+  slider1.style.transform = `translateX(${offset}px)`;
+}
+
+// Initialize slider
+updateSlider();
+
+// Event listeners for arrows
+leftBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  updateSlider();
+});
+
+rightBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % cards.length;
+  updateSlider();
+});
+
+// Optional: Handle window resize
+window.addEventListener('resize', updateSlider);
