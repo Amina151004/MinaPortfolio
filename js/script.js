@@ -128,16 +128,7 @@ function createTrailDot(x, y) {
     trail.remove();
   }, 500);
 }
-window.addEventListener('scroll', () => {
-  const elements = document.querySelectorAll('.hidden');
-  elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add('visible');
-      el.classList.remove('hidden');
-    }
-  });
-});
+
 
 
 const slider1 = document.querySelector('.projects-slider');
@@ -176,3 +167,20 @@ rightBtn.addEventListener('click', () => {
 
 // Optional: Handle window resize
 window.addEventListener('resize', updateSlider);
+
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      
+    }
+  });
+}, { threshold: 0.2 });
+
+reveals.forEach(el => observer.observe(el));
+
+
+
+

@@ -88,6 +88,13 @@ html, body {
   width: 100%;
 }
 
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrollbars */
+}
+
 .stars {
   position: fixed;
   top: 0;
@@ -275,7 +282,8 @@ button:active {
   right: -10%;
   will-change: transform;
   transition: transform 0.1s linear;
-  z-index: 10;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .left{
@@ -466,6 +474,7 @@ button:active {
 }
 
 .contact-me {
+  width: 100%;
   padding: 6rem;
   background-color: #1e1e1e;
   text-align: center;
@@ -543,16 +552,6 @@ button:active {
   font-size: 1.3rem;
 }
 
-.hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .projects {
   margin-top: 3rem;
@@ -560,11 +559,13 @@ button:active {
   padding: 4rem 0;
   color: #fff;
   text-align: center;
+  overflow-x: hidden;
 }
 
 
 
 .projects h1 {
+ 
   margin-bottom: 4rem;
 }
 .projects-wrapper {
@@ -572,7 +573,6 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   margin: 0 auto;
   padding: 0 60px; /* Space for arrows */
 }
@@ -644,3 +644,20 @@ button:active {
 .projects-slider :nth-child(2) {
   padding-bottom: 0;
 }
+
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+

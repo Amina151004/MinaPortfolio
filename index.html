@@ -6,7 +6,9 @@
     <title>Amina Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    
   </head>
+  
   <body>
     <div class="loader">
       <h1 class="loader-text"></h1>
@@ -57,6 +59,50 @@
       <div
         class="star"
         style="left: 24%; animation-duration: 7s; animation-delay: 2s"
+      ></div>
+      <div
+        class="star"
+        style="left: 10%; animation-duration: 5s; animation-delay: 0s"
+      ></div>
+      <div
+        class="star"
+        style="left: 20%; animation-duration: 7s; animation-delay: 2s"
+      ></div>
+      <div
+        class="star"
+        style="left: 30%; animation-duration: 6s; animation-delay: 1s"
+      ></div>
+      <div
+        class="star"
+        style="left: 40%; animation-duration: 8s; animation-delay: 3s"
+      ></div>
+      <div
+        class="star"
+        style="left: 50%; animation-duration: 5.5s; animation-delay: 1.5s"
+      ></div>
+      <div
+        class="star"
+        style="left: 20%; animation-duration: 4.5s; animation-delay: 2.5s"
+      ></div>
+      <div
+        class="star"
+        style="left: 50%; animation-duration: 1.5s; animation-delay: 0.5s"
+      ></div>
+      <div
+        class="star"
+        style="left: 85%; animation-duration: 2.5s; animation-delay: 3.5s"
+      ></div>
+      <div
+        class="star"
+        style="left: 96%; animation-duration: 7s; animation-delay: 1s"
+      ></div>
+      <div
+        class="star"
+        style="left: 24%; animation-duration: 5s; animation-delay: 0s"
+      ></div>
+      <div
+        class="star"
+        style="left: 44%; animation-duration: 7s; animation-delay: 2s"
       ></div>
       <div
         class="star"
@@ -228,7 +274,12 @@
       </div>
     </div>
     <img src="images/circle.png" class="circle-scroll" alt="" />
-    <div class="aboutme hidden" id="aboutme">
+
+
+
+
+
+    <div class="aboutme reveal" id="aboutme">
       <div class="aboutme-text">
         <p class="small-text">get to know me</p>
         <h1>About Me</h1>
@@ -248,17 +299,17 @@
     </div>
     <img src="images/circle - Copie.png" class="left" alt="" />
 
-    <div class="projects" id="projects">
+    <div class="projects reveal" id="projects">
   <h1>Projects</h1>
   <div class="projects-wrapper">
     <button class="arrow left-arrow">&#10094;</button>
     <div class="projects-slider">
-      <div class="project-card active">
+      <div class="project-card">
         <h2>Portfolio</h2>
         <p>My personal portfolio website is a modern, interactive showcase of my skills and projects. It features parallax effects, custom animations, and a clean design, offering visitors a dynamic way to explore my work as a developer and designer.</p>
         <a href="https://mina2934.github.io/BaileyDupont/" target="_blank" rel="noopener noreferrer"><img class="project-image" src="images/Capture d’écran 2025-06-24 193324.png" alt=""></a>
       </div>
-      <div class="project-card">
+      <div class="project-card active">
         <h2>Aquaprotect -mobile app-</h2>
         <p>AquaProtect is an innovative water quality monitoring system designed to provide real-time analysis of key parameters such as pH, turbidity, TDS, temperature, and gas levels. It integrates embedded sensors with a mobile app for intuitive visualization, helping users ensure the safety and cleanliness of their water sources.</p>
         <a href="http://" target="_blank" rel="noopener noreferrer"><img class="project-app" src="images/Nouveau projet.png" alt=""></a>
@@ -275,18 +326,20 @@
 
 
 
-    <div class="Skills hidden">
+    <div class="Skills reveal">
       <h1>Technical Skills</h1>
       <div class="skills-box">
         <div class="Designer">
           <h1 class="gradient">Designer <i class="bx bx-laptop"></i></h1>
-          <p>
+           
+            <p>
             I am a creative and detail-oriented designer who loves crafting
             modern, user-friendly, and functional interfaces. With
             <strong>Canva</strong> and <strong>Figma</strong> and
             <strong>CMS</strong>, I design intuitive visuals that enhance user
             experience and align with project goals.
           </p>
+           
         </div>
 
         <div class="coder">
@@ -827,7 +880,7 @@
       </div>
     </div>
 
-    <div class="Degrees-Certifications">
+    <div class="Degrees-Certifications reveal" id="degrees">
       <h1>Degrees & Certifications</h1>
       <div class="education">
         <div class="edutext">
@@ -855,7 +908,7 @@
       </div>
     </div>
 
-    <div class="contact-me" id="contact">
+    <div class="contact-me reveal" id="contact">
       <h1>Contact Me</h1>
       <form id="contactForm">
         <input
