@@ -25,6 +25,9 @@
   box-shadow: 0 0 10px #00ddeb, 0 0 20px #5b42f3, 0 0 30px #af40ff;
 }
 
+.skils-tit{
+  margin-bottom: 2rem;
+}
 .cursor-trail {
   position: fixed;
   width: 6px;
@@ -49,6 +52,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  text-align: center;
   z-index: 9999;
   transition: opacity 5s ease, visibility 3s ease;
 }
@@ -87,6 +92,8 @@ html, body {
   font-family: var(--font-family);
   width: 100%;
 }
+
+
 
 body {
   position: relative;
@@ -149,7 +156,7 @@ header nav ul {
 }
 
 header nav ul li {
-  margin-right: 5rem;
+  margin-right: 2rem;
 }
 
 header nav ul li a {
@@ -410,6 +417,7 @@ button:active {
     top: 25%;
     right: 10%;
     max-width: 400px;
+    margin-bottom: 3rem;
 }
 
 .skills-slider {
@@ -471,6 +479,15 @@ button:active {
 
 .skills-slider::-webkit-scrollbar {
   display: none; /* optional: hide scrollbar */
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 .contact-me {
@@ -660,4 +677,592 @@ button:active {
 
 
 
+.end{
+  width: 100%;
+  text-align: center;
+  background-color: #1e1e1e;
+  padding-bottom: 2rem;
+}
 
+
+
+
+
+
+@media (max-width: 1100px) {
+  .hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.hero-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ text-align: center;
+
+ left: 0rem;
+
+}
+  .robot {
+    position: relative;
+  top: 9rem;
+  right: 0;
+  left: 1rem;
+}
+
+.aboutme{
+  margin-top: 47rem;
+}
+
+
+.circle-scroll {
+  top: 70rem;
+  right: -15%;
+}
+
+.left {
+  top: 115rem;
+  left: -15%;
+}
+
+.Designer{
+    left: 5%;
+    max-width: 300px;
+}
+.coder{
+    right: 5%;
+    max-width: 300px;
+}
+.skills-slider{
+  margin-top: 9rem;
+}
+
+
+
+}
+
+
+
+@media (max-width: 857px) {
+   .skills-box{
+    align-items: center;
+    flex-direction: column;
+   }
+   .Designer{
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    max-width: 30rem;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+.skills-box h1{
+  background: linear-gradient(90deg, #af40ff, #5b42f3, #00ddeb);
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.skills-box p{
+    line-height: 23px;
+}
+
+
+.coder{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    right: 0;
+    max-width: 30rem;
+    margin-top: 2rem;
+}
+
+
+
+
+.education{
+
+  flex-direction: column-reverse;
+
+
+}
+
+
+.edutext{
+  margin: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.logo-uni{
+  margin-right: 0rem;
+}
+
+
+
+.left{
+  top: 120rem;
+}
+}
+
+
+@media (max-width:775px){
+
+  nav ul {
+    display: none !important;
+    flex-direction: column;
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border-radius: 20px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 16rem;
+    padding: 1rem;
+  }
+
+
+  nav ul li {
+    margin: 1rem 0;
+    font-size: 2rem;
+
+  }
+  nav ul.show {
+    display: flex !important;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .Degrees-Certifications h1{
+    text-align: center;
+    width: 100%;
+  }
+
+
+  /* Socials */
+.socials-container {
+  display: flex;
+  position: relative;
+  left: 0rem;
+  top: 0rem;
+  margin-top: 12rem;
+}
+
+.socials-container a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+}
+
+.socials-container a svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.socials-container a:hover svg path {
+  fill: var(--accent-color);
+}
+
+  .robot {
+  position: relative;
+  top: -6%;
+  right: 0rem;
+  left: 1rem;
+}
+
+.circle-scroll {
+  width: 15rem;
+  height: 15rem;
+  top: 75rem;
+}
+
+.left{
+
+  width: 15rem;
+  height: 15rem;
+  top: 120rem;
+  
+}
+
+.aboutme p {
+  font-size: 1rem;
+  color: var(--text-color);
+  max-width: 800px;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  margin-top: 4rem;
+}
+
+
+
+}
+
+
+@media (max-width:596px){
+.hero-text {
+
+ font-size: 3.5rem;
+
+}
+
+
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: min-content;
+  width: 31.25rem;
+  margin: 0 15px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  background: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #5b42f3;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.6;
+  flex-shrink: 0;
+  margin: 2rem;
+}
+
+.arrow {
+  font-size: 2rem;
+  
+}
+
+.left-arrow {
+  left: 0rem;
+}
+
+.right-arrow {
+  right: 0rem;
+}
+
+
+.project-image {
+  max-width: 20rem;
+  margin: 2rem;
+}
+
+.project-app{
+  margin-top: 1rem;
+  max-width: 13rem;
+
+}
+.Skills h1{
+  margin-bottom: 2rem;
+}
+.slider-track{
+position: relative;
+ margin-top: 10rem;
+}
+
+
+.edutext{
+
+  margin: 2rem;
+  font-size: 1rem !important;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.skils-tit{
+  top: 0;
+  position: relative;
+}
+
+.Designer{
+  position: relative;
+  top: 3rem;
+}
+.coder{
+  position: relative;
+  top: 3rem;
+}
+}
+
+
+@media (max-width:440px){
+  .hero-text {
+
+ font-size: 3rem;
+
+}
+.hero .small-text{
+  font-size: 0.7rem;
+  font-style: normal;
+  margin-top: 1rem;
+  font-family: var(--font-family);
+}
+
+.aboutme{
+  margin-top: 35rem;
+}
+
+
+.circle-scroll {
+  width: 13rem;
+  height: 13rem;
+  top: 63rem;
+}
+
+
+
+
+.aboutme p {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  max-width: 100%;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  margin-top: 0rem;
+}
+
+.left{
+width: 13rem;
+  height: 13rem;
+  top: 105rem;
+  
+}
+
+
+* h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+.projects {
+  padding: 0rem;
+  
+  width: 100%;
+  max-width: 440px;
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-wrapper {
+  position: relative;
+  width: 31rem;
+  padding: 0 0px;
+}
+
+.projects-slider {
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  /* Hide scrollbars */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-left: 2.6rem;
+  margin-right: 2.6rem;
+
+}
+
+.projects-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 0px;
+  box-sizing: border-box;
+  min-width: 10rem;
+  max-width: 24rem;
+
+  transition: none;
+  opacity: 1;
+  flex-shrink: 0;
+  margin: 0 2.6rem;
+
+
+}
+
+.project-card.active {
+  transform: none;
+}
+
+
+.project-image {
+  max-width: 20rem;
+  height: auto;
+  margin: 1rem;
+  object-fit: contain;
+}
+
+.project-app{
+  max-width: 20rem;
+  height: auto;
+  object-fit: contain;
+
+}
+
+.arrow {
+  display: none; /* Hide arrows on mobile */
+}
+
+.Skills {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  
+}
+
+.skils-tit{
+   margin-bottom: 5rem;
+
+}
+
+
+.skills-box{
+    width: 100%;
+    height: max-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
+}
+
+
+.Designer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0%;
+    left: 0%;
+    max-width: max-content;
+    margin: 3rem 0;
+}
+
+.skills-box h1{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.skills-box p{
+    line-height: 23px;
+}
+
+
+.coder{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0%;
+    right: 0%;
+    max-width: max-content;
+    margin-bottom: 0rem;
+}
+
+.skills-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0rem;
+}
+
+
+
+
+
+.slide p {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+
+
+.loader-text {
+  font-size: 2rem;
+  
+}
+
+.Degrees-Certifications {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: var(--text-color);
+}
+
+.education{
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: start;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.logo-uni {
+  width: 270px;
+  height: 270px;
+  margin-right: 0rem;
+  margin-bottom: 2rem;
+}
+
+.edutext{
+  margin: àrem;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.edutext span {
+  font-weight: bold;
+  background: linear-gradient(90deg, #af40ff, #5b42f3, #00ddeb);
+  font-size: 1rem;
+}
+
+
+.contact-me {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+
+
+}

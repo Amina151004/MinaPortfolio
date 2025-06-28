@@ -4,6 +4,7 @@
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   const heroText = document.querySelector('.hero-text');
+  const social = document.querySelector('.socials-container');
   const robot = document.querySelector('.robot');
   const circle = document.querySelector('.circle-scroll');
   const circle1 = document.querySelector('.left');
@@ -15,6 +16,7 @@ window.addEventListener('scroll', () => {
   if (circle) circle.style.transform = `rotate(${scrollY * 0.3}deg)`;
   if (circle1) circle1.style.transform = `rotate(${scrollY * 0.3}deg)`;
   if (corner) corner.style.transform = `translateY(${scrollY * 0.2}px)`;
+  if(social) social.style.transform =`translateY(${scrollY * 0.3}px)`;
 
   if (aboutMe) {
     const rect = aboutMe.getBoundingClientRect();
@@ -184,3 +186,66 @@ reveals.forEach(el => observer.observe(el));
 
 
 
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('menu-toggle');
+      const navList = document.getElementById('nav-list');
+
+      if (toggleBtn && navList) {
+        toggleBtn.addEventListener('click', () => {
+          console.log("Clicked menu icon");
+          navList.classList.toggle('show');
+        });
+      } else {
+        console.error("Missing element: #menu-toggle or #nav-list not found");
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.projects-slider');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  // Touch events
+  slider.addEventListener('touchstart', (e) => {
+    isDown = true;
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('touchend', () => {
+    isDown = false;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+});

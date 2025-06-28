@@ -163,10 +163,15 @@
     </div>
 
     <header>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       <nav>
-        <ul>
+        <ul id="nav-list">
           <li><a href="#aboutme">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#degrees">Degrees</a></li>
+          <li><a href="#contact">Contact Me</a></li>
         </ul>
       </nav>
     </header>
@@ -185,15 +190,8 @@
         <button>
           <a class="text" href="#aboutme">More Info</a>
         </button>
+
       </div>
-      <script
-        type="module"
-        src="https://unpkg.com/@splinetool/viewer@1.10.8/build/spline-viewer.js"
-      ></script>
-      <spline-viewer
-        class="robot"
-        url="https://prod.spline.design/WHm2pFx9OfumHLnL/scene.splinecode"
-      ></spline-viewer>
       <div class="socials-container">
         <a
           data-social="Github"
@@ -272,6 +270,15 @@
           </svg>
         </a>
       </div>
+      <script
+        type="module"
+        src="https://unpkg.com/@splinetool/viewer@1.10.8/build/spline-viewer.js"
+      ></script>
+      <spline-viewer
+        class="robot"
+        url="https://prod.spline.design/WHm2pFx9OfumHLnL/scene.splinecode"
+      ></spline-viewer>
+      
     </div>
     <img src="images/circle.png" class="circle-scroll" alt="" />
 
@@ -326,11 +333,11 @@
 
 
 
-    <div class="Skills reveal">
-      <h1>Technical Skills</h1>
+    <div class="Skills reveal" id="skills">
+      <h1 class="skils-tit">Technical Skills</h1>
       <div class="skills-box">
         <div class="Designer">
-          <h1 class="gradient">Designer <i class="bx bx-laptop"></i></h1>
+          <h1 class="gradient">Designer</i></h1>
            
             <p>
             I am a creative and detail-oriented designer who loves crafting
@@ -343,7 +350,7 @@
         </div>
 
         <div class="coder">
-          <h1 class="gradient">Coder <i class="bx bx-code-block"></i></h1>
+          <h1 class="gradient">Coder</i></h1>
           <p>
             I am a versatile developer passionate about building high-quality
             applications across software and hardware platforms. I work with
@@ -936,6 +943,9 @@
       </form>
     </div>
 
+    <p class="end">Crafted with ♥ and clean code</p>
+
     <script src="js/script.js"></script>
+    
   </body>
 </html>
